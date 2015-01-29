@@ -115,6 +115,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 		// Called when the user clicks on the page action.
 		chrome.pageAction.onClicked.addListener(function(tab) {
 			extractID(tab.url);
+			console.log(clickCount);
 			if (id) {
 				//1 clicks copy 15, 2 copy 18, 3 copy clean link
 				if ((clickCount % 3) == 1){
